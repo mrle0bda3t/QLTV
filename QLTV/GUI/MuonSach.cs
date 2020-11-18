@@ -109,6 +109,110 @@ namespace QLTV.Use_Control
             bindingCTPM();
         }
 
-       
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            addpm = true;
+            groupControl2.Enabled = true;
+            // Load NextID len textbox MaPM
+            txtMaPhieu.Text = pmBUS.NextID();
+            cleantxtPM();
+            cboMaDG.Focus();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            updatepm = true;
+            groupControl2.Enabled = true;
+            cboMaDG.Focus();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            CTPhieuMuon_DTO ctpm = LayTTCTPM();
+            if (MessageBox.Show("Bạn có muốn xóa Phiếu mượn : " + txtMaPhieu.Text + " không ?", "Hỏi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (pmBUS.KiemTra(txtMaPhieu.Text))
+                {
+                    MessageBox.Show("Bạn phải xóa thông tin trong bảng Chi Tiết Phiếu Mượn trước !", "Error !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                pmBUS.XoaPM(txtMaPhieu.Text);
+                MuonSach_Load(sender, e);
+                }
+            }
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            PhieuMuon_DTO pm = LayTTPM();
+            if (addpm)
+            {
+                pmBUS.ThemPM(pm);
+                MuonSach_Load(sender, e);
+            }
+            if (updatepm)
+                pmBUS.SuaPM(pm);
+            MuonSach_Load(sender, e);
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            MuonSach_Load(sender, e);
+        }
+
+        private void btnThem1_Click(object sender, EventArgs e)
+        {
+            addctpm = true;
+            groupControl4.Enabled = true;
+            // Load NextID len textbox MaPM
+            cleantxtPM();
+            cboMaPhieu.Focus();
+        }
+
+        private void btnSua1_Click(object sender, EventArgs e)
+        {
+            updatepm = true;
+            groupControl4.Enabled = true;
+            cboMaPhieu.Enabled = false;
+            cboSach.Focus();
+        }
+
+        private void dgvPhieuMuon_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelControl1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnXoa1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn xóa Chi tiết Phiếu mượn : " + txtMaPhieu.Text + " không ?", "Hỏi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                ctpmBUS.XoaCTPM(txtMaPhieu.Text);
+                MuonSach_Load(sender, e);
+            }
+        }
+
+        private void btnLuu1_Click(object sender, EventArgs e)
+        {
+            CTPhieuMuon_DTO ctpm = LayTTCTPM();
+            if (addctpm)
+            {
+                ctpmBUS.ThemCTPM(ctpm);
+                MuonSach_Load(sender, e);
+            }
+            if (updatectpm)
+                ctpmBUS.SuaCTPM(ctpm);
+            MuonSach_Load(sender, e);
+        }
+
+        private void btnHuy1_Click(object sender, EventArgs e)
+        {
+            MuonSach_Load(sender, e);
+        }
     }
 }
