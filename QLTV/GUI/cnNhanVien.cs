@@ -83,6 +83,49 @@ namespace QLTV.Use_Control
             binding();
         }
 
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            add = true; update = false;
+            groupControl1.Enabled = true;
+            // Load NextID len textbox MaSV
+            txtMaNV.Text = nvBUS.NextID();
+            cleantxt();
+            txtHoTenNV.Focus();
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            update = true; add = false;
+            groupControl1.Enabled = true;
+            txtHoTenNV.Focus();
+        }
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn xóa Nhân Viên: " + txtHoTenNV.Text + " không ?", "Hỏi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                nvBUS.XoaNV(txtMaNV.Text);
+                cnNhanVien_Load(sender, e);
+            }
+        }
+
+        private void simpleButton4_Click(object sender, EventArgs e)
+        {
+            NhanVien_DTO nv = LayTTDG();
+            if (add)
+            {
+                nvBUS.ThemNV(nv);
+                cnNhanVien_Load(sender, e);
+            }
+            if (update)
+                nvBUS.SuaNV(nv);
+                cnNhanVien_Load(sender, e);
+        }
+
+        private void simpleButton5_Click(object sender, EventArgs e)
+        {
+            cnNhanVien_Load(sender, e);
+        }
 
     }
 }
