@@ -116,6 +116,10 @@
     <Compile Include="GUI\About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\cnNhanVien.cs" />
+    <Compile Include="GUI\cnNhanVien.Designer.cs">
+      <DependentUpon>cnNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="TrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +131,9 @@
     <Compile Include="Utilities.cs" />
     <EmbeddedResource Include="GUI\About.resx">
       <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\cnNhanVien.resx">
+      <DependentUpon>cnNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>
