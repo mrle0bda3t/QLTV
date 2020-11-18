@@ -109,7 +109,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddTab\AddTab.cs" />
+    <Compile Include="BLL\TacGia_BLL.cs" />
     <Compile Include="DAL\ConnectDB.cs" />
+    <Compile Include="DTO\TacGia_DTO.cs" />
+    <Compile Include="GUI\About.cs" />
+    <Compile Include="GUI\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
     <Compile Include="TrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities.cs" />
+    <EmbeddedResource Include="GUI\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>
     </EmbeddedResource>
@@ -325,9 +334,6 @@
     <None Include="Resources\search_all.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BLL\" />
-    <Folder Include="DTO\" />
-    <Folder Include="GUI\" />
     <Folder Include="Reports\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
