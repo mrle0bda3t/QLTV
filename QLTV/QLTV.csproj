@@ -122,6 +122,12 @@
     <Compile Include="GUI\cnMatKhau.Designer.cs">
       <DependentUpon>cnMatKhau.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ttBanThan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ttBanThan.Designer.cs">
+      <DependentUpon>ttBanThan.cs</DependentUpon>
+    </Compile>
     <Compile Include="TrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\cnMatKhau.resx">
       <DependentUpon>cnMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ttBanThan.resx">
+      <DependentUpon>ttBanThan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>

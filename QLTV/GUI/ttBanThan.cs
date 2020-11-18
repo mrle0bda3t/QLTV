@@ -18,17 +18,17 @@ namespace QLTV.GUI
         {
             InitializeComponent();
         }
-
+        //hien thi thong tin cu the cho tung ca nhan
         private void groupControl1_Paint(object sender, PaintEventArgs e)
         {
             Utilities.user= nvBUS.LayThongTinBanThan(Utilities.user.MaNV);
             txtMaNV.Text = Utilities.user.MaNV;
             txtHoTenNV.Text = Utilities.user.HoTenNV;
-            if (Convert.ToString(Utilities.user.GioiTinhNV) == "0")
+            if (Convert.ToString(Utilities.user.GioiTinhNV) != "0")
             {
-                txtGioiTinh.Text = "Nam";
+                txtGioiTinh.Text = "Nữ";
             }
-            else txtGioiTinh.Text = "Nữ";
+            else txtGioiTinh.Text = "Nam";
             dateNgaySinh.Text = Convert.ToString(Utilities.user.NgaySinhNV);
             txtSdt.Text = Utilities.user.DienThoaiNV;
             txtDiaChi.Text = Utilities.user.DiaChiNV;
