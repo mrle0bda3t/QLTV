@@ -116,6 +116,12 @@
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="DTO\TacGia_DTO.cs" />
+    <Compile Include="GUI\cnMatKhau.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\cnMatKhau.Designer.cs">
+      <DependentUpon>cnMatKhau.cs</DependentUpon>
+    </Compile>
     <Compile Include="TrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     <Compile Include="Utilities.cs" />
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\cnMatKhau.resx">
+      <DependentUpon>cnMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>
@@ -334,7 +343,6 @@
     <None Include="Resources\search_all.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="GUI\" />
     <Folder Include="Reports\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
