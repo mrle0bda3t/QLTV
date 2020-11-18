@@ -45,7 +45,12 @@ namespace QLTV.GUI
                 return false;
                 goto Cont;
             }
-            
+            if (newPass != reNewPass)
+            {
+                lblThongBao.Text = "Mật khẩu mới không khớp nhau !";
+                return false;
+                goto Cont;
+            }
 
             //Kiểm tra mật khẩu cũ có khớp không
             if (Utilities.user.MatKhau != oldPass)
