@@ -89,6 +89,34 @@ namespace QLTV.GUI
             cleantxt();
             if (radTheLoai.Checked == true) cboTheLoai.Enabled = true;
         }
+        //click button tim kiem
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            if (radMaSach.Checked)
+            {
+                dgvDanhSach.DataSource = sBUS.TimKiemSach("MaSach", txtMaSach.Text);
+            }
+            if (radTenSach.Checked)
+            {
+                dgvDanhSach.DataSource = sBUS.TimKiemSach("TenSach", txtTenSach.Text);
+            }
+            if (radTenNXB.Checked)
+            {
+                dgvDanhSach.DataSource = sBUS.TimKiemSach("MaNXB", cboNXB.EditValue.ToString());
+            }
+            if (radTenTG.Checked)
+            {
+                dgvDanhSach.DataSource = sBUS.TimKiemSach("MaTG", cboTacGia.EditValue.ToString());
+            }
+            if (radTheLoai.Checked)
+            {
+                dgvDanhSach.DataSource = sBUS.TimKiemSach("MaTL", cboTheLoai.EditValue.ToString());
+            }
+        }
 
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            cleantxt();
+        }
     }
 }
