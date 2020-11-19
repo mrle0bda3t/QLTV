@@ -84,5 +84,48 @@ namespace QLTV.Use_Control
             binding();
         }
 
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            add = true; update = false;
+            groupControl1.Enabled = true;
+            // Load NextID len textbox MaSV
+            txtMaDG.Text = dgBUS.NextID();
+            cleantxt();
+            txtTenDG.Focus();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            update = true; add = false;
+            groupControl1.Enabled = true;
+            txtTenDG.Focus();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn xóa Độc Giả: " + txtTenDG.Text + " không ?", "Hỏi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                dgBUS.XoaDG(txtMaDG.Text);
+                cnDocGia_Load(sender, e);
+            }
+        }
+
+        private void btnLuulai_Click(object sender, EventArgs e)
+        {
+            DocGia_DTO tg = LayTTDG();
+            if (add)
+            {
+                dgBUS.ThemDG(tg);
+                cnDocGia_Load(sender, e);
+            }
+            if (update)
+                dgBUS.SuaDG(tg);
+                cnDocGia_Load(sender, e);        
+        }
+
+        private void btnHuybo_Click(object sender, EventArgs e)
+        {
+            cnDocGia_Load(sender, e);   
+        }
     }
 }
