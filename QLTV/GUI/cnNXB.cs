@@ -84,5 +84,38 @@ namespace QLTV.Use_Control
             txtTenNXB.Focus();
         }
 
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn xóa Nhà Xuất Bản: " + txtTenNXB.Text + " không ?", "Hỏi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (nxbBUS.KiemTra(txtMaNXB.Text))
+                {
+                    MessageBox.Show("Bạn phải xóa những sách có mã NXB '" + txtMaNXB.Text + "' trong bảng Sách trước !", "Error !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    nxbBUS.XoaNXB(txtMaNXB.Text);
+                    cnNXB_Load(sender, e);
+                }
+            }
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            NXB_DTO nxb = LayTTNXB();
+            if (add)
+            {
+                nxbBUS.ThemNXB(nxb);
+                cnNXB_Load(sender, e);
+            }
+            if (update)
+                nxbBUS.SuaNXB(nxb);
+                cnNXB_Load(sender, e);
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            cnNXB_Load(sender, e);
+        }
     }
 }
