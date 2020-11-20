@@ -54,6 +54,31 @@ namespace QLTV.GUI
             cleantxt();
             if (radDiaChi.Checked == true) txtDiaChi.Enabled = true;
         }
-        
+        //click button tim kiem
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            if (radMaDG.Checked)
+            {
+                dgvDocGia.DataSource = dgBUS.TimKiemDG("MaDG", txtMaDG.Text);
+            }
+            if (radTenDG.Checked)
+            {
+                dgvDocGia.DataSource = dgBUS.TimKiemDG("HoTenDG", txtTenDG.Text);
+            }
+            if (radDiaChi.Checked)
+            {
+                dgvDocGia.DataSource = dgBUS.TimKiemDG("DiaChiDG", txtDiaChi.Text);
+            }
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            cleantxt();
+        }
+
+        private void btnHienThi_Click(object sender, EventArgs e)
+        {
+            tkDocGia_Load(sender, e);
+        }
     }
 }
