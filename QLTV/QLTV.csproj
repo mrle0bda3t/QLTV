@@ -112,9 +112,17 @@
     <Compile Include="BLL\TacGia_BLL.cs" />
     <Compile Include="DAL\ConnectDB.cs" />
     <Compile Include="DTO\TacGia_DTO.cs" />
-    <Compile Include="GUI\About.cs" />
+    <Compile Include="GUI\About.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="GUI\About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\cnNXB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\cnNXB.Designer.cs">
+      <DependentUpon>cnNXB.cs</DependentUpon>
     </Compile>
     <Compile Include="TrangChu.cs">
       <SubType>Form</SubType>
@@ -127,6 +135,9 @@
     <Compile Include="Utilities.cs" />
     <EmbeddedResource Include="GUI\About.resx">
       <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\cnNXB.resx">
+      <DependentUpon>cnNXB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>
