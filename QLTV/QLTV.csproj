@@ -122,6 +122,12 @@
     <Compile Include="GUI\cnMatKhau.Designer.cs">
       <DependentUpon>cnMatKhau.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\tkDocGia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\tkDocGia.Designer.cs">
+      <DependentUpon>tkDocGia.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\tkSach.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -148,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\cnMatKhau.resx">
       <DependentUpon>cnMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\tkDocGia.resx">
+      <DependentUpon>tkDocGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\tkSach.resx">
       <DependentUpon>tkSach.cs</DependentUpon>
