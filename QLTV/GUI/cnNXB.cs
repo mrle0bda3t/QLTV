@@ -66,5 +66,23 @@ namespace QLTV.Use_Control
             binding();
         }
 
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            add = true; update = false;
+            groupControl1.Enabled = true;
+            // Load NextID len textbox MaNXB
+            txtMaNXB.Text = nxbBUS.NextID();
+            cleantxt();
+            txtMaNXB.Focus();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            update = true; add = false;
+            groupControl1.Enabled = true;
+            txtMaNXB.Enabled = false;
+            txtTenNXB.Focus();
+        }
+
     }
 }
