@@ -110,17 +110,25 @@
   <ItemGroup>
     <Compile Include="AddTab\AddTab.cs" />
     <Compile Include="BLL\TacGia_BLL.cs" />
+    <Compile Include="BLL\TheLoai_BLL.cs" />
     <Compile Include="DAL\ConnectDB.cs" />
     <Compile Include="DangNhap.cs" />
     <Compile Include="DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="DTO\TacGia_DTO.cs" />
+    <Compile Include="DTO\TheLoai_DTO.cs" />
     <Compile Include="GUI\cnMatKhau.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GUI\cnMatKhau.Designer.cs">
       <DependentUpon>cnMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmTraSach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\frmTraSach.Designer.cs">
+      <DependentUpon>frmTraSach.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\tkDocGia.cs">
       <SubType>UserControl</SubType>
@@ -154,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\cnMatKhau.resx">
       <DependentUpon>cnMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmTraSach.resx">
+      <DependentUpon>frmTraSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\tkDocGia.resx">
       <DependentUpon>tkDocGia.cs</DependentUpon>
