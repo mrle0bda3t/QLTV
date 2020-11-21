@@ -83,6 +83,73 @@ namespace QLTV.GUI
             binding();
         }
 
-        
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            add = true; update = false;
+            groupControl2.Enabled = true;
+            cboMaPhieu.Enabled = true;
+            cleantxt();
+            cboMaPhieu.Focus();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            update = true; add = false;
+            groupControl2.Enabled = true;
+            cboMaPhieu.Enabled = false;
+            cboMaSach.Focus();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn xóa Phiếu trả với loại Sách Mượn: " + cboMaSach.EditValue.ToString() + " không ?", "Hỏi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                ptBUS.XoaPT(cboMaSach.EditValue.ToString());
+                cnTraSach_Load(sender, e);
+            }
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            TraSach_DTO ts = LayTTTS();
+            if (add)
+            {
+                ptBUS.ThemPT(ts);
+                cnTraSach_Load(sender, e);
+            }
+            if (update)
+                ptBUS.SuaPT(ts);
+            cnTraSach_Load(sender, e);
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            cnTraSach_Load(sender, e);
+        }
+
+        private void cboMaPhieu_TextChanged(object sender, EventArgs e)
+        {
+            //Load combobox Mã Sách Trả
+            cboMaSach.Properties.DataSource = sBUS.LayDSSachTheoPM(cboMaPhieu.EditValue.ToString());
+            cboMaSach.Properties.DisplayMember = "MaSach";
+            cboMaSach.Properties.ValueMember = "MaSach";
+        }
+
+        //Chỉ cho phép nhập số vào 
+        private void txtPhatHong_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtPhatQH_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
