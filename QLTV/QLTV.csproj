@@ -124,6 +124,12 @@
     <Compile Include="GUI\cnNXB.Designer.cs">
       <DependentUpon>cnNXB.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\cnTheLoai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\cnTheLoai.Designer.cs">
+      <DependentUpon>cnTheLoai.cs</DependentUpon>
+    </Compile>
     <Compile Include="TrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\cnNXB.resx">
       <DependentUpon>cnNXB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\cnTheLoai.resx">
+      <DependentUpon>cnTheLoai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>
