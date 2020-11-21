@@ -58,6 +58,58 @@ namespace QLTV.Use_Control
             binding();
         }
 
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            add = true; update = false;
+            groupControl1.Enabled = true;
+            // Load NextID len textbox MaSV
+            txtMaTL.Text = tlBUS.NextID();
+            cleantxt();
+            txtMaTL.Focus();
+        }
 
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            update = true; add = false;
+            groupControl1.Enabled = true;
+            txtMaTL.Enabled = false;
+            txtTenTL.Focus();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn xóa Thể loại: " + txtTenTL.Text + " không ?", "Hỏi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (tlBUS.KiemTra(txtMaTL.Text))
+                {
+                    MessageBox.Show("Bạn phải xóa những loại sách có mã TG '"+txtMaTL.Text+"' trong bảng Sách trước !", "Error !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    tlBUS.XoaTL(txtMaTL.Text);
+                    cnTheLoai_Load(sender, e);
+                }
+            }
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            TheLoai_DTO tl = LayTTTL();
+            if (update)
+            {
+                tlBUS.SuaTL(tl);
+                cnTheLoai_Load(sender, e);
+            }
+            if (add)
+            {
+                tlBUS.ThemTL(tl);
+                cnTheLoai_Load(sender, e);
+            }
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            cnTheLoai_Load(sender, e);
+        }
     }
 }
