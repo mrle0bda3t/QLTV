@@ -21,6 +21,20 @@ namespace QLTV.Reports
             InitializeComponent();
         }
 
-        
+        private void reportViewerTraSach_Load(object sender, EventArgs e)
+        {
+            //Gán datasource cho reports
+            TraSach_DTOBindingSource.DataSource = tsBUS.LayDanhSachTRASACH();
+            this.reportViewerTraSach.RefreshReport();
+        }
+
+        private void btnLap_Click(object sender, EventArgs e)
+        {
+            string NguoiLap = txtName.Text;
+            IList<ReportParameter> param = new List<ReportParameter>();
+            param.Add(new ReportParameter("NguoiLap", NguoiLap));
+            reportViewerTraSach.LocalReport.SetParameters(param);
+            reportViewerTraSach.RefreshReport();
+        }
     }
 }
