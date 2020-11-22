@@ -80,6 +80,38 @@ namespace QLTV.Use_Control
             txtTenTG.Focus();
         }
 
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn xóa Tác Giả: " + txtTenTG.Text + " không ?", "Hỏi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (tgBUS.KiemTra(txtMaTG.Text))
+                {
+                    MessageBox.Show("Bạn phải xóa những loại sách có mã TG '" + txtMaTG.Text + "' trong bảng Sách trước !", "Error !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    tgBUS.XoaTG(txtMaTG.Text);
+                    cnTacGia_Load(sender, e);
+                }
+            }
+        }
 
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            TacGia_DTO tg = LayTTTG();
+            if (add)
+            {
+                tgBUS.ThemTG(tg);
+                cnTacGia_Load(sender, e);
+            }
+            if (update)
+                tgBUS.SuaTG(tg);
+            cnTacGia_Load(sender, e);
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            cnTacGia_Load(sender, e);
+        }
     }
 }
