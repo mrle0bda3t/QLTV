@@ -61,5 +61,25 @@ namespace QLTV.Use_Control
             groupControl1.Enabled = false;
             binding();
         }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            add = true; update = false;
+            groupControl1.Enabled = true;
+            // Load NextID len textbox MaSV
+            txtMaTG.Text = tgBUS.NextID();
+            cleantxt();
+            txtTenTG.Focus();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            update = true; add = false;
+            groupControl1.Enabled = true;
+            txtMaTG.Enabled = false;
+            txtTenTG.Focus();
+        }
+
+
     }
 }
