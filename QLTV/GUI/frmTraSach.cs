@@ -23,7 +23,7 @@ namespace QLTV.Reports
 
         private void reportViewerTraSach_Load(object sender, EventArgs e)
         {
-            //Gán datasource cho reports
+            
             TraSach_DTOBindingSource.DataSource = tsBUS.LayDanhSachTRASACH();
             this.reportViewerTraSach.RefreshReport();
         }
