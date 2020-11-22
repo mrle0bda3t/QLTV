@@ -20,7 +20,21 @@ namespace QLTV.Reports
         {
             InitializeComponent();
         }
+        private void reportViewerDocGia_Load(object sender, EventArgs e)
+        {
+            //Gán datasource cho reports
+            DocGia_DTOBindingSource.DataSource = dgBUS.Laydsdocgia();
+            this.reportViewerDocGia.RefreshReport();
+        }
 
-        
+        private void btnLap_Click(object sender, EventArgs e)
+        {
+            string Nguoilap = txtName.Text;
+            IList<ReportParameter> param = new List<ReportParameter>();
+            param.Add(new ReportParameter("NguoiLap", Nguoilap));
+            reportViewerDocGia.LocalReport.SetParameters(param);
+            reportViewerDocGia.RefreshReport();
+        }
+
     }
 }
