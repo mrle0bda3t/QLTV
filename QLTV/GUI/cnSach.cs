@@ -104,6 +104,61 @@ namespace QLTV.Use_Control
             binding();
         }
 
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            add = true; update = false;
+            groupControl1.Enabled = true;
+            // Load NextID len textbox MaSV
+            txtMaSach.Text = sBUS.NextID();
+            cleantxt();
+            txtTenSach.Focus();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            update = true; add = false;
+            groupControl1.Enabled = true;
+            txtTenSach.Focus();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+
+            if (MessageBox.Show("Bạn có muốn xóa Sách : " + txtTenSach.Text + " không ?", "Hỏi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                sBUS.XoaSach(txtMaSach.Text);
+                cnSach_Load(sender, e);
+            }
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            Sach_DTO s = LayTTSach();
+            if (add)
+            {
+                sBUS.ThemSach(s);
+                cnSach_Load(sender, e);
+            }
+            if (update)
+                sBUS.SuaSach(s);
+                cnSach_Load(sender, e);
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            cnSach_Load(sender, e);
+        }
+
+        //Chỉ cho phép nhập vào số
+        private void txtSoTrang_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                //Bỏ qua những phím không hợp lệ
+                e.Handled = true;
+            }
+        }
+
 
     }
 }
