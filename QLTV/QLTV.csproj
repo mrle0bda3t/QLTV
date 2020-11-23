@@ -124,6 +124,12 @@
     <Compile Include="GUI\cnNXB.Designer.cs">
       <DependentUpon>cnNXB.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\cnSach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\cnSach.Designer.cs">
+      <DependentUpon>cnSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\cnTacGia.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\cnNXB.resx">
       <DependentUpon>cnNXB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\cnSach.resx">
+      <DependentUpon>cnSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\cnTacGia.resx">
       <DependentUpon>cnTacGia.cs</DependentUpon>
