@@ -186,6 +186,30 @@
     <Compile Include="GUI\ttNhanVien.Designer.cs">
       <DependentUpon>ttNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\cnNXB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\cnNXB.Designer.cs">
+      <DependentUpon>cnNXB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\cnSach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\cnSach.Designer.cs">
+      <DependentUpon>cnSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\cnTacGia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\cnTacGia.Designer.cs">
+      <DependentUpon>cnTacGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\cnTheLoai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\cnTheLoai.Designer.cs">
+      <DependentUpon>cnTheLoai.cs</DependentUpon>
+    </Compile>
     <Compile Include="TrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +253,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ttNhanVien.resx">
       <DependentUpon>ttNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\cnNXB.resx">
+      <DependentUpon>cnNXB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\cnSach.resx">
+      <DependentUpon>cnSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\cnTacGia.resx">
+      <DependentUpon>cnTacGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\cnTheLoai.resx">
+      <DependentUpon>cnTheLoai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>
