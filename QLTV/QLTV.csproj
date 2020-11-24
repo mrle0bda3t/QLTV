@@ -109,20 +109,36 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddTab\AddTab.cs" />
+    <Compile Include="BLL\DocGia_BLL.cs" />
+    <Compile Include="BLL\NhanVien_BLL.cs" />
     <Compile Include="BLL\TacGia_BLL.cs" />
     <Compile Include="DAL\ConnectDB.cs" />
+    <Compile Include="DTO\DocGia_DTO.cs" />
+    <Compile Include="DTO\NhanVien_DTO.cs" />
     <Compile Include="DTO\TacGia_DTO.cs" />
-    <Compile Include="GUI\About.cs" />
+    <Compile Include="GUI\About.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="GUI\About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\cnDocGia.cs" />
+    <Compile Include="GUI\cnDocGia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="GUI\cnDocGia.Designer.cs">
       <DependentUpon>cnDocGia.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\cnNhanVien.cs" />
+    <Compile Include="GUI\cnNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="GUI\cnNhanVien.Designer.cs">
       <DependentUpon>cnNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ttNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ttNhanVien.Designer.cs">
+      <DependentUpon>ttNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="TrangChu.cs">
       <SubType>Form</SubType>
@@ -141,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\cnNhanVien.resx">
       <DependentUpon>cnNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ttNhanVien.resx">
+      <DependentUpon>ttNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>
