@@ -118,5 +118,10 @@ namespace QLTV.GUI
         {
             cleantxt();
         }
+
+        private void btnHienThi_Click(object sender, EventArgs e)
+        {
+            tkSach_Load(sender, e);
+        }
     }
 }
