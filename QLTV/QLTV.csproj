@@ -109,45 +109,42 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddTab\AddTab.cs" />
-    <Compile Include="BLL\DocGia_BLL.cs" />
-    <Compile Include="BLL\NhanVien_BLL.cs" />
-    <Compile Include="BLL\TacGia_BLL.cs" />
-<<<<<<< HEAD
-    <Compile Include="DAL\ConnectDB.cs" />
-    <Compile Include="DTO\DocGia_DTO.cs" />
-    <Compile Include="DTO\NhanVien_DTO.cs" />
-    <Compile Include="DTO\TacGia_DTO.cs" />
-    <Compile Include="GUI\About.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="DangNhap.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\About.Designer.cs">
-      <DependentUpon>About.cs</DependentUpon>
-=======
-    <Compile Include="BLL\TheLoai_BLL.cs" />
-    <Compile Include="DAL\ConnectDB.cs" />
-    <Compile Include="DangNhap.cs" />
     <Compile Include="DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="BLL\CTPhieuMuon_BLL.cs" />
+    <Compile Include="BLL\DocGia_BLL.cs" />
+    <Compile Include="BLL\NhanVien_BLL.cs" />
+    <Compile Include="BLL\NXB_BLL.cs" />
+    <Compile Include="BLL\PhieuMuon_BLL.cs" />
+    <Compile Include="BLL\Sach_BLL.cs" />
+    <Compile Include="BLL\TacGia_BLL.cs" />
+    <Compile Include="BLL\TheLoai_BLL.cs" />
+    <Compile Include="BLL\TraSach_BLL.cs" />
+    <Compile Include="DTO\CTPhieuMuon_DTO.cs" />
+    <Compile Include="DTO\DocGia_DTO.cs" />
+    <Compile Include="DTO\NhanVien_DTO.cs" />
+    <Compile Include="DTO\NXB_DTO.cs" />
+    <Compile Include="DTO\PhieuMuon_DTO.cs" />
+    <Compile Include="DTO\Sach_DTO.cs" />
     <Compile Include="DTO\TacGia_DTO.cs" />
     <Compile Include="DTO\TheLoai_DTO.cs" />
+    <Compile Include="DAL\ConnectDB.cs" />
+    <Compile Include="DTO\TraSach_DTO.cs" />
     <Compile Include="GUI\cnMatKhau.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GUI\cnMatKhau.Designer.cs">
       <DependentUpon>cnMatKhau.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmDocGia.cs">
+    <Compile Include="GUI\cnTraSach.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\frmDocGia.Designer.cs">
-      <DependentUpon>frmDocGia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\frmTraSach.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\frmTraSach.Designer.cs">
-      <DependentUpon>frmTraSach.cs</DependentUpon>
+    <Compile Include="GUI\cnTraSach.Designer.cs">
+      <DependentUpon>cnTraSach.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\tkDocGia.cs">
       <SubType>UserControl</SubType>
@@ -158,7 +155,7 @@
     <Compile Include="GUI\tkSach.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\tkSach.designer.cs">
+    <Compile Include="GUI\tkSach.Designer.cs">
       <DependentUpon>tkSach.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\ttBanThan.cs">
@@ -166,7 +163,50 @@
     </Compile>
     <Compile Include="GUI\ttBanThan.Designer.cs">
       <DependentUpon>ttBanThan.cs</DependentUpon>
->>>>>>> origin/TQ_BaoCao
+    </Compile>
+    <Compile Include="GUI\ttLuotMuon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ttLuotMuon.Designer.cs">
+      <DependentUpon>ttLuotMuon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ttMuonQuaHan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ttMuonQuaHan.Designer.cs">
+      <DependentUpon>ttMuonQuaHan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ttSachChuaDuocMuon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ttSachChuaDuocMuon.Designer.cs">
+      <DependentUpon>ttSachChuaDuocMuon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmDocGia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\frmDocGia.Designer.cs">
+      <DependentUpon>frmDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmTraSach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\frmTraSach.Designer.cs">
+      <DependentUpon>frmTraSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrangChu.Designer.cs">
+      <DependentUpon>TrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GUI\About.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\cnDocGia.cs">
       <SubType>UserControl</SubType>
@@ -179,12 +219,6 @@
     </Compile>
     <Compile Include="GUI\cnNhanVien.Designer.cs">
       <DependentUpon>cnNhanVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\ttNhanVien.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\ttNhanVien.Designer.cs">
-      <DependentUpon>ttNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\cnNXB.cs">
       <SubType>UserControl</SubType>
@@ -210,30 +244,57 @@
     <Compile Include="GUI\cnTheLoai.Designer.cs">
       <DependentUpon>cnTheLoai.cs</DependentUpon>
     </Compile>
-    <Compile Include="TrangChu.cs">
-      <SubType>Form</SubType>
+    <Compile Include="GUI\MuonSach.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TrangChu.Designer.cs">
-      <DependentUpon>TrangChu.cs</DependentUpon>
+    <Compile Include="GUI\MuonSach.Designer.cs">
+      <DependentUpon>MuonSach.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GUI\ttDocGia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ttDocGia.Designer.cs">
+      <DependentUpon>ttDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ttNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ttNhanVien.Designer.cs">
+      <DependentUpon>ttNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ttNXB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ttNXB.Designer.cs">
+      <DependentUpon>ttNXB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ttSach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ttSach.Designer.cs">
+      <DependentUpon>ttSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ttTacGia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ttTacGia.Designer.cs">
+      <DependentUpon>ttTacGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ttTheLoai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ttTheLoai.Designer.cs">
+      <DependentUpon>ttTheLoai.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utilities.cs" />
-<<<<<<< HEAD
-    <EmbeddedResource Include="GUI\About.resx">
-      <DependentUpon>About.cs</DependentUpon>
-=======
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\cnMatKhau.resx">
       <DependentUpon>cnMatKhau.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmDocGia.resx">
-      <DependentUpon>frmDocGia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmTraSach.resx">
-      <DependentUpon>frmTraSach.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\cnTraSach.resx">
+      <DependentUpon>cnTraSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\tkDocGia.resx">
       <DependentUpon>tkDocGia.cs</DependentUpon>
@@ -243,28 +304,22 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ttBanThan.resx">
       <DependentUpon>ttBanThan.cs</DependentUpon>
->>>>>>> origin/TQ_BaoCao
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\cnDocGia.resx">
-      <DependentUpon>cnDocGia.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\ttLuotMuon.resx">
+      <DependentUpon>ttLuotMuon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\cnNhanVien.resx">
-      <DependentUpon>cnNhanVien.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\ttMuonQuaHan.resx">
+      <DependentUpon>ttMuonQuaHan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ttNhanVien.resx">
-      <DependentUpon>ttNhanVien.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\ttSachChuaDuocMuon.resx">
+      <DependentUpon>ttSachChuaDuocMuon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\cnNXB.resx">
-      <DependentUpon>cnNXB.cs</DependentUpon>
+    <EmbeddedResource Include="Reports\fptTraSach.rdlc" />
+    <EmbeddedResource Include="Reports\frmDocGia.resx">
+      <DependentUpon>frmDocGia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\cnSach.resx">
-      <DependentUpon>cnSach.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\cnTacGia.resx">
-      <DependentUpon>cnTacGia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\cnTheLoai.resx">
-      <DependentUpon>cnTheLoai.cs</DependentUpon>
+    <EmbeddedResource Include="Reports\frmTraSach.resx">
+      <DependentUpon>frmTraSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>
@@ -283,6 +338,48 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="GUI\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\cnDocGia.resx">
+      <DependentUpon>cnDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\cnNhanVien.resx">
+      <DependentUpon>cnNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\cnNXB.resx">
+      <DependentUpon>cnNXB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\cnSach.resx">
+      <DependentUpon>cnSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\cnTacGia.resx">
+      <DependentUpon>cnTacGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\cnTheLoai.resx">
+      <DependentUpon>cnTheLoai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MuonSach.resx">
+      <DependentUpon>MuonSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ttDocGia.resx">
+      <DependentUpon>ttDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ttNhanVien.resx">
+      <DependentUpon>ttNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ttNXB.resx">
+      <DependentUpon>ttNXB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ttSach.resx">
+      <DependentUpon>ttSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ttTacGia.resx">
+      <DependentUpon>ttTacGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ttTheLoai.resx">
+      <DependentUpon>ttTheLoai.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Properties\DataSources\QLTV.DTO.CTPhieuMuon_DTO.datasource" />
     <None Include="Properties\DataSources\QLTV.DTO.DocGia_DTO.datasource" />
@@ -321,6 +418,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Reports\rptDocGia.rdlc" />
     <None Include="Resources\info.png" />
   </ItemGroup>
   <ItemGroup>
@@ -470,9 +568,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\search_all.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Reports\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
